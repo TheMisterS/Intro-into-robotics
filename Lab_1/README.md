@@ -31,13 +31,88 @@ List of components used in the project:
 ## Schematics
 <img alt="image" src="./illustrations_and_extras/pseudo_2fa_mechanism.png" />
 <img alt="image" src="./illustrations_and_extras/pseudo_2fa_mechanism_schematic.png" />
+mp4
+pseudo_2fa_mechanism.pdf
+pseudo_2fa_mechanism.png
+pseudo_2fa_mechanism_schematic.png
+README.md
+pseudo_2fa_mechanism1.ino
+requirements.png
+Intro-into-robotics/Lab_1
+/
+README.md
+in
+master
+
+Edit
+
+Preview
+Indent mode
+
+Spaces
+Indent size
+
+2
+Line wrap mode
+
+Soft wrap
+Editing README.md file contents
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
 
 [View PDF](./illustrations_and_extras/pseudo_2fa_mechanism.pdf)
 
 ## Demo
 
-<video src='./illustrations_and_extras/pseudo_2fa_mechanism.mp4' width=fill/>
+https://github.com/user-attachments/assets/ba1d6b73-0267-491b-9caa-456fdc94bc86
 
+[View uncompressed mp4](././illustrations_and_extras/pseudo_2fa_mechanism.mp4)
 
 ## Future Improvements
 
