@@ -1,0 +1,10 @@
+﻿Name,Quantity,Component
+"U1",1," Arduino Uno R3"
+"D1",1,"Red LED"
+"R1, R2",2,"1 kΩ Resistor"
+"KEYPAD2",1," Keypad 4x4"
+"M1",1," DC Motor"
+"D2",1," Diode"
+"T1",1," NPN Transistor (BJT)"
+"R3",1," Photoresistor"
+"R4",1,"10 kΩ Resistor"
