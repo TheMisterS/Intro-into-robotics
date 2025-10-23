@@ -36,8 +36,9 @@ List of components used in the project:
 
 ## Demo
 
-<video src='./illustrations_and_extras/pseudo_2fa_mechanism.mp4' width=fill/>
+https://github.com/user-attachments/assets/ba1d6b73-0267-491b-9caa-456fdc94bc86
 
+[View uncompressed mp4](././illustrations_and_extras/pseudo_2fa_mechanism.mp4)
 
 ## Future Improvements
 
