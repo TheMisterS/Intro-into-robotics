@@ -1,16 +1,19 @@
 # Arduino powered Do-re-mi machine :)
 
+<img alt="image" src="./illustrations_and_extras/real_life_view.jpg" />
+
 ## Problem
 Building of asynchronous, event-driven tone player with Arduino which leverages the inbuilt ISR timer, timer interrupts, one external(hardware interrupt) & storage in EEPROM memory.
 
 ## Schematics
+<img alt="image" src="./illustrations_and_extras/schematic.png" />
+<img alt="image" src="./illustrations_and_extras/visualisation.png" />
 
 ## DEMO
 
-
 https://github.com/user-attachments/assets/0665bf44-7afb-441a-963f-9505a3e0d4a1
 
-
+[View uncompressed mp4](././illustrations_and_extras/DEMO.mp4)
 ## Design
 
 #### 1. **Timer-based**
