@@ -2,6 +2,15 @@
 
 ## Problem
 Building of asynchronous, event-driven tone player with Arduino which leverages the inbuilt ISR timer, timer interrupts, one external(hardware interrupt) & storage in EEPROM memory.
+
+## Schematics
+
+## DEMO
+
+
+https://github.com/user-attachments/assets/0665bf44-7afb-441a-963f-9505a3e0d4a1
+
+
 ## Design
 
 #### 1. **Timer-based**
@@ -44,7 +53,7 @@ List of components used in the project:
 | 1        | MAX7219-controlled 8x8 LED matrix |
 
 
-## Schematics
+
 
 ## EEPROM layout
 | Address | Size | Content              |
