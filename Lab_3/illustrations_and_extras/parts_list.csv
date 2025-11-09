@@ -1,0 +1,8 @@
+﻿Name,Quantity,Component
+U1,1, Arduino Uno R3
+S1,1, Pushbutton
+Digit1,1,Anode 7 Segment Display (5011BS)
+SERVO1,1,Positional Micro Servo (SG90)
+R1,1, Photoresistor
+"R2, R3, R4, R5, R6, R7, R8, R9",8,220 Ω Resistor
+R10,1,1 kΩ Resistor
