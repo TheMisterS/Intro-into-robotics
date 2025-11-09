@@ -55,9 +55,6 @@ List of components used in the project:
 | 1        | Button                   |
 | 1        | MAX7219-controlled 8x8 LED matrix |
 
-
-
-
 ## EEPROM layout
 | Address | Size | Content              |
 |---------|------|----------------------|
@@ -77,8 +74,6 @@ List of components used in the project:
 - FALLING edge detection when button is pressed and released, signal goes from high to low.    
     - Sets `button_flag` to signal main loop to play special note
     - Allows interrupting the Do-Re-Mi sequence at any time
-## Demo
-
 
 ## Future Improvements
 - **Additional buttons**: Add multiple buttons to trigger different special notes or melodies
