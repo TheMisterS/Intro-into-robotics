@@ -3,29 +3,30 @@
 <img alt="image" src="./illustrations_and_extras/real_life_view.jpg" />
 
 ## Problem
-Building of asynchronous, event-driven servo gate controlled by a light sensor or manual override with Arduino. It  leverages the inbuilt ISR timer, timer interrupts, one external(hardware interrupt) & storage in EEPROM memory.
+Building of an asynchronous, event-driven servo gate controlled by a light sensor or manual override with Arduino. It  leverages the inbuilt ISR timer, timer interrupts, one external(hardware interrupt) & storage in EEPROM memory.
 ## Schematics
 <img alt="image" src="./illustrations_and_extras/schematic.png" />
 <img alt="image" src="./illustrations_and_extras/visualisation.png" />
 
 ## DEMO
 
+https://github.com/user-attachments/assets/425b010b-a7b5-4656-be30-0a5dd4b5439d
 
 [View uncompressed mp4](././illustrations_and_extras/DEMO.mp4)
 ## Design
 1. Timer-based
   - Uses Timer2 in CTC mode to generate a 1ms system tick. (Timer2 was chosen, as Timer1 is utilized by the servo.h library and could cause interference).
-  - Millisecond counter provides timing base for reading values from light sensor and updating servo angle if light threshold is met.
+  - Millisecond counter provides a timing base for reading values from the light sensor and updating the servo angle if the light threshold is met.
 
 2. Light-based auto gate control
   - Reads the photoresistor value every set amount of ms (SAMPLE_MS).
   - Maps light level (0–1023) to a digit 0–9 using a constrain function and shows it on a common-anode 7‑segment display using a segment mapping display array and function.
-  - If light levels surpass the set threshold (LIGHT_OPEN_THRESHOLD), updates the servo angle to 180° (opens the gate); otherwise updates it to starting angle (closes the gate).
+  - If light levels surpass the set threshold (LIGHT_OPEN_THRESHOLD), updates the servo angle to 180° (opens the gate); otherwise, updates it to the starting angle (closes the gate).
   - Tracks max observed light (light_max_value) & gate open count only on transitions closed->open (gate_open_counter)
 
 3. Manual override (button)
   - Button press  on FALLING edge with 50ms debounce triggers manual ISR.
-  - The main loop processes the button flag: opens the servo immediately, displays a special symbol (DIGITS[11])  and  holds it open for set amount of sample intervals(intervals_to_keep_open).
+  - The main loop processes the button flag: opens the servo immediately, displays a special symbol (DIGITS[11]),  and  holds it open for a set amount of sample intervals(intervals_to_keep_open).
   - The open count(gate_open_counter) increments only on transitions closed->open.
 
 4. EEPROM statistics tracking
@@ -73,12 +74,12 @@ List of components used in the project:
 - Triggered on the pushbutton FALLING edge.
     - Performs 50 ms debounce.
     - Updates `last_bnt_ms` to current `ms_count` when accepted.
-    - Sets `button_flag` signaling the main loop to immediately force gate open, display special symbol, and start the timed override window.
+    - Sets `button_flag` signaling the main loop to immediately force the gate open, display a special symbol, and start the timed override window.
 
 
 ## Future Improvements
 - **Adjustable thresholds**: Add user-configurable open/close light thresholds with buttons
 - **Startup auto-calibration**: Sample ambient light for a few seconds on boot to set baseline and/or dynamic thresholds.
 - **Heartbeat with DP segment**: Heartbeat indicator: Blink the DP segment every second to show the system is alive.
-- **Button long-press actions**: Long press to reset stats (max light, open count).
+- **Button long-press actions**: Long-press to reset stats (max light, open count).
 
