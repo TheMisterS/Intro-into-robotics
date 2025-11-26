@@ -66,7 +66,7 @@ void setup() {
   setupTimer2_1kHz();
   attachInterrupt(digitalPinToInterrupt(BUTTON_PIN), onButtonISR, FALLING);
 
-   read_from_eeprom();
+  read_from_eeprom();
 
   remaining_Ms = 0;
 }
@@ -108,14 +108,16 @@ void loop() {
     display_digit(DIGITS[digit]);
 
     if (light >= LIGHT_OPEN_THRESHOLD) {
-      servo.write(180);
       if (!servo_is_open) {
+        servo.write(180);
         gate_open_counter++;
         servo_is_open = true;
       }
     } else {
-      servo.write(starting_angle);
-      servo_is_open = false;
+      if (servo_is_open) {
+        servo.write(starting_angle);
+        servo_is_open = false;
+      }
     }
     Serial.print("light level =");
     Serial.println(light);
@@ -132,7 +134,6 @@ void loop() {
 
   remaining_Ms = SAMPLE_MS;
 }
-
 
 void setupTimer2_1kHz() {
   TCCR2A = 0;
