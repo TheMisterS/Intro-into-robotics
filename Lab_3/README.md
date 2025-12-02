@@ -3,7 +3,7 @@
 <img alt="image" src="./illustrations_and_extras/real_life_view.jpg" />
 
 ## Problem
-Building of an asynchronous, event-driven servo gate controlled by a light sensor or manual override with Arduino. It  leverages the inbuilt ISR timer, timer interrupts, one external(hardware interrupt) & storage in EEPROM memory.
+Building of an asynchronous, event-driven servo gate controlled by a light sensor or manual override with Arduino. It  leverages the inbuilt ISR timer, timer interrupts, one external(hardware interrupt) & storage in EEPROM memory. Has to use different components from lab_2.
 ## Schematics
 <img alt="image" src="./illustrations_and_extras/schematic.png" />
 <img alt="image" src="./illustrations_and_extras/visualisation.png" />
